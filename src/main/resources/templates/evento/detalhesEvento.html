@@ -54,6 +54,10 @@
 		</form>
 		</div>
 
+
+	<div>
+    	<h5 class="center-align">LISTA DE CONVIDADOS:</h5>
+  	</div>
 	<table class="container tabelaConvidado">
 		<thead>
 			<tr>
@@ -63,10 +67,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="convidado : ${convidado}">
+			<tr class="container" th:each="convidado : ${convidados}">
+			
 				<td><span th:text="${convidado.nomeConvidado}"></span></td>
 				<td><span th:text="${convidado.rg}"></span></td>
-				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}"><i class="material-icons left">delete</i></a></td>
+				<td><a class="waves-effect waves-light btn-small"><i class="material-icons left">delete</i></a></td>
+
 			</tr>
 		</tbody>
 	</table>
