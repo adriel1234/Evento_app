@@ -34,12 +34,12 @@
 	</header>
 
 
-	<th:block th:include="mensagemValidacao"></th:block>
 	<div class="container formEvento">
-
+	
 		<form class="container" method="post">
-
+		<th:block th:include="mensagemValidacao"></th:block>
 			<div class="row">
+			
 				<div class="input-field col s12">
 					<!--  Nome: <input type="text" value="" name="nome" /> -->
 					<input placeholder="Nome Evento" id="nome_evento" type="text"
@@ -60,6 +60,7 @@
 					 Horario: <input type="text" class="timepicker" name="horario">
 				</div>
 			</div>
+			
 			<button class="btn waves-effect waves-light" type="submit"
 				name="action">
 				Salvar <i class="material-icons right">send</i>

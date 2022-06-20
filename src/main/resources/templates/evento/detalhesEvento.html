@@ -34,9 +34,11 @@
 			<p>Horario: <span th:text="${evento.horario}"></span></p>
 		</div>
 	</div>
-	<  
-		 <th:block th:include="mensagemValidacao"></th:block>
+	  
+		 
+		 
 		<div class="container formConvidado">
+		<th:block th:include="mensagemValidacao"></th:block>
 		<form method="post" th:object="${convidado}">
 			<div class="input-field col s12">
 					<!--  Nome: <input type="text" value="" name="nome" /> -->
