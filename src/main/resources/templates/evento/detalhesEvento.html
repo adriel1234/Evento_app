@@ -41,12 +41,13 @@
 			<div class="input-field col s12">
 					<!--  Nome: <input type="text" value="" name="nome" /> -->
 					<input placeholder="Nome Completo" id="nome_convidado" type="text"
-						class="validate" value="" name="nome" /> <label for="nome_convidado">Nome
+						class="validate" value="" name="nomeConvidado" /> <label for="nome_convidado">Nome
 						Completo</label>
 			</div>
 			<div class="input-field col s12">
-			<input id="rg_convidado" type="text" class="validate" value=""name="rg" /> <label for="rg_convidado">RG</label>
 			
+			<input id="rg_convidado" type="text" class="validate" value=""name="rg" /> 
+			<label for="rg_convidado">RG</label>
 			</div>
 			
 			<button class="waves-effect waves-light btn" type="submit">Adicionar</button>
@@ -62,7 +63,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="convidado : ${convidados}">
+			<tr th:each="convidado : ${convidado}">
 				<td><span th:text="${convidado.nomeConvidado}"></span></td>
 				<td><span th:text="${convidado.rg}"></span></td>
 				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}"><i class="material-icons left">delete</i></a></td>
